@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* margin-top: 12px;
+            background-color: blueviolet;
+            border-color: black;
+            border: blue; */
+            border-radius: 16px;
+    margin: 400px;
+    background-color: rgb(164, 164, 176);
+    padding: 112px;
+    margin-block: -10px;
+    padding-left: 117px;
+    border-color: black;
+    border: 71px;
+    height: 77px;
+}
+    
+
+
+form{
+    margin-top: -125px;
+
+}
+            
+        
+
+
+    </style>
+    link
+</head>
+<div id="time">timedis 
+    <h2>time is <span id="time"></span> </h2>
+</div>
+<div>
+    <td id="navbar">
+        <tr>wheather</tr>
+        <form action="black">
+            <input type="search" name="search" id="search" placeholder="search wheather here">
+            <button onclick="submit" type="submit">click here to submit   </button>
+        </form>
+    </td>
+
+    
+</div>
+<body>
+    <script>
+        function time(){
+            let time=new Date();
+            console.log(time)
+         document.getElementById("time").innerHTML=time
+        }
+        setInterval(time, 1000);
+    </script>
+    
+</body>
+</html>

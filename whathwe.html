@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        background-color: rgb(136, 184, 184);
+        color: black;
+        border-radius: 12px;
+        border-color: black;
+        margin: 21px;
+        padding: 15px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-seriff;
+    }
+
+    #wheather {
+        width: 569px;
+        height: 192px;
+        padding: 54px;
+        background: #c28383;
+        margin-left: 300px
+    }
+
+    #h2 {
+        text-align: center;
+        margin: -12px;
+    }
+
+    form {
+        margin-top: 20px;
+        margin-left: 150px;
+
+    }
+
+    #button:hover {
+        color: rgb(31, 25, 103);
+        background-color: rgb(131, 131, 201);
+
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>time is <span id="time">reloading</span> </h1>
+    </div>
+    <div id="wheather">
+        <h2 id="h2">wheather</h2>
+        <form action="">
+            <input type="search" name="search" id="search" placeholder="enter to see wheather">
+            <!-- <button id="button" type="submit">submit</button> -->
+            <!-- <p id="p">wheather <span id="wh"></span> </p>
+            <button id="btn" onclick="wheather()" type="submit">submit</button> -->
+
+        </form>
+        <p id="p">wheather <span id="wh"></span> </p>
+        <button id="btn" onclick="wheather()" type="submit">submit</button>
+
+    </div>
+
+</body>
+<script>
+    function timedis() {
+        let time = new Date();
+        console.log(time)
+        document.getElementById("time").innerHTML = time;
+    }
+    // setInterval(timedis, 1000);
+
+
+
+
+    function wheather() {
+        let wh = fetch("https://api.openweathermap.org/data/2.5/weather?q=mohali&appid=700e469659faf7a117a20a74920700d4").then((response) => {
+            return response.json()
+        })
+            .then(data => console.log(wh))
+            .catch(err => console.error(err))
+        console.log(wh)
+
+
+
+        document.getElementById("wh").innerHTML = wh;
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+function hide(){
+    let btn=document.getElementById("btn");
+    let p=document.getElementById("p");
+    //    if(p.style.display !="none"){
+    //     p.style.display="none"
+    //    }else{
+    //     p.style.display="flex"
+    //    }      -->
+
+</html>

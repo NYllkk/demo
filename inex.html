@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #conatiner{
+        background-color: antiquewhite;
+        border: 2px solid #4c8c77;
+        text-align: center;
+        font-family: cursive
+    }
+</style>
+<div id="conatiner">
+    <h1>time is </h1>
+    <h2 id="time">reloading</h2>
+</div>
+
+<body>
+
+</body>
+<script>
+    function time() {
+        let time = new Date();
+        console.log(time)
+        document.getElementById("time").innerHTML = time;
+    }
+    setInterval(() => {
+        console.log(time())
+
+    }, 1000);
+
+</script>
+
+</html>
